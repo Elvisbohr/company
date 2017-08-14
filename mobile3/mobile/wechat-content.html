@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/swiper.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<!-- 删除默认的苹果工具栏和菜单栏 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<!-- 禁止了把数字转化为拨号链接 -->
+<meta name="format-detection" content="telephone=no">
+<!-- 浏览网站时的小图标 -->
+<link rel="shortcut icon" href="" type="/image/x-icon">
+<title>内容运营</title>
+</head>
+
+<body class="wechat">
+    <!-- 内容 -->
+    <section class="content"><div class="wrap">
+		<div class="top">
+        	<h2 class="title delay02 duration08 slideDown">内容运营</h2>
+            <p class="delay04 duration08 slideDown">量身定制原创图文资讯内容</p>
+            <p class="delay06 duration08 slideDown">输出高质量文案创意</p>
+        </div>
+        <div class="pic_box">
+        	<ul class="swiper-wrapper">
+            	<li class="swiper-slide"><div>
+                	<img src="img/wechat/content/swiper1.png" class="img delay08 duration08 slideDown delTrans" data-swiper-parallax="-200"/>
+                    <h4 class="delay1 duration08 slideDown delTrans" data-swiper-parallax="-400">图文创意</h4>
+                    <p class="delay12 duration08 slideDown delTrans" data-swiper-parallax="-600">根据时事热点及娱乐时间</p>
+                    <p class="delay14 duration08 slideDown delTrans" data-swiper-parallax="-800">进行图文创意</p>
+                </div></li>
+                <li class="swiper-slide"><div>
+                	<img src="img/wechat/content/swiper2.png" class="img" data-swiper-parallax="-200"/>
+                    <h4 data-swiper-parallax="-400">文案撰写</h4>
+                    <p data-swiper-parallax="-600">根据客户需求策划亮点文</p>
+                    <p data-swiper-parallax="-800">案内容</p>
+                </div></li>
+                <li class="swiper-slide"><div>
+                	<img src="img/wechat/content/swiper3.png" class="img" data-swiper-parallax="-200"/>
+                    <h4 data-swiper-parallax="-400">H5页面设计</h4>
+                    <p data-swiper-parallax="-600">根据客户要求进行H5页面设</p>
+                    <p data-swiper-parallax="-800">计与策划</p>
+                </div></li>
+                <li class="swiper-slide"><div>
+                	<img src="img/wechat/content/swiper4.png" class="img" data-swiper-parallax="-200"/>
+                    <h4 data-swiper-parallax="-400">排版优化</h4>
+                    <p data-swiper-parallax="-600">针对客户提供的文字素材进</p>
+                    <p data-swiper-parallax="-800">行相应排版优化</p>
+                </div></li>
+                <li class="swiper-slide"><div>
+                	<img src="img/wechat/content/swiper5.png" class="img" data-swiper-parallax="-200"/>
+                    <h4 data-swiper-parallax="-400">图片优化</h4>
+                    <p data-swiper-parallax="-600">针对客户提供的原图素材</p>
+                    <p data-swiper-parallax="-800">进行相应排版优化</p>
+                </div></li>
+            </ul>
+            <div class="swiper-pagination delay14 duration08 slideDown delTrans"></div>
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev delay08 duration08 slideDown delTrans"><img src="img/wechat/content/prev.png"/></div>
+            <div class="swiper-button-next delay08 duration08 slideDown delTrans"><img src="img/wechat/content/next.png"/></div>
+        </div>
+   	</div></section>
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script type="text/javascript" src="js/swiper-3.3.1.jquery.min.js"></script>
+    <script>
+		window.onload = function(){
+			$(".content").addClass("active");
+			//height 为100%
+			$(".heightHun").each(function(index, element) {
+               var oP = $(this).parent();
+			   $(this).height(oP.height());
+            });
+			setTimeout(function(){
+				$(".delTrans").removeClass("duration08 slideDown");
+				$(".delTrans").css({"webkit-transition-delay":"0s","transition-delay":"0s"});
+				var mySwiper = new Swiper(".pic_box",{
+					pagination: '.swiper-pagination',
+					paginationClickable: true,
+					prevButton:'.swiper-button-prev',
+					nextButton:'.swiper-button-next',
+					grabCursor : true,
+					parallax:true,
+					speed:1000,
+				})
+			},2000);
+			
+		}
+    </script>
+</body>
+</html>

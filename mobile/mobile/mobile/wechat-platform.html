@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<!-- 删除默认的苹果工具栏和菜单栏 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<!-- 禁止了把数字转化为拨号链接 -->
+<meta name="format-detection" content="telephone=no">
+<!-- 浏览网站时的小图标 -->
+<link rel="shortcut icon" href="" type="/image/x-icon">
+<title>平台系统搭建</title>
+</head>
+
+<body class="wechat">
+    <!-- 内容 -->
+    <section class="platform"><div class="wrap">
+		<div class="top">
+        	<h2 class="title delay02 duration08 slideDown">平台系统搭建</h2>
+            <p class="delay04 duration08 slideDown">为您搭建个性化的微信公众号平台系统</p>
+            <p class="delay06 duration08 slideDown">打造微官网、微商城、社会化分销体系等内容</p>
+            <p class="delay08 duration08 slideDown">完美呈现品牌特色</p>
+        </div>
+        <div class="pic_box">
+        	<img src="img/wechat/platform/platform_c1.png" class="circle1 delay14 duration08 scale" />
+			<div class="circle2_box table heightHun"><div class="table_cell">
+            	<img src="img/wechat/platform/platform_c1.png" class="circle2 delay12 duration08 scale"/>
+            </div></div>
+            <div class="circle3_box table heightHun"><div class="table_cell">
+            	<img src="img/wechat/platform/platform_c1.png" class="circle3 delay1 duration08 scale"/>
+            </div></div>
+            <div class="icon_box delay18 duration08 rotate3" >
+                <div class="micro_mall delay18 duration08 rotate4"><img src="img/wechat/platform/micro_mall.png"/></div>
+                <div class="distribution delay18 duration08 rotate4"><img src="img/wechat/platform/distribution.png"/></div>
+                <div class="activity delay18 duration08 rotate4"><img src="img/wechat/platform/activity.png"/></div>
+                <div class="service delay18 duration08 rotate4"><img src="img/wechat/platform/service.png"/></div>
+                <div class="official delay18 duration08 rotate4"><img src="img/wechat/platform/official.png"/></div>
+                <div class="vip delay18 duration08 rotate4"><img src="img/wechat/platform/vip.png"/></div>
+                <div class="material delay18 duration08 rotate4"><img src="img/wechat/platform/material.png"/></div>
+                <div class="menu delay18 duration08 rotate4"><img src="img/wechat/platform/menu.png"/></div>
+            </div>
+        </div>
+   	</div></section>
+    
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script>
+		window.onload = function(){
+			$(".platform").addClass("active");
+			//height 为100%
+			$(".heightHun").each(function(index, element) {
+               var oP = $(this).parent();
+			   $(this).height(oP.height());
+            });
+		}
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="styles/swiper.min.css"/>
+<link rel="stylesheet" type="text/css" href="styles/animate.min.css" />
+<title>无标题文档</title>
+</head>
+
+<body>
+    <!-- slide start-->
+    <div class="swiper-container">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+                <div class="bg ani scale_small" swiper-animate-effect="scale_small" swiper-animate-duration="1.5s" swiper-animate-delay="0s" style="background:url(img/banner1.jpg) no-repeat 0 50%;background-size:100% auto;"></div>
+            </li>
+            <li class="swiper-slide">
+                <div class="bg ani" swiper-animate-effect="scale_small" swiper-animate-duration="0.8s" swiper-animate-delay="0s" style="background:url(img/banner2.jpg) no-repeat 0 50%;background-size:100% auto;"></div>
+            </li>
+            <li class="swiper-slide">
+                <div class="bg ani" swiper-animate-effect="scale_small" swiper-animate-duration="0.8s" swiper-animate-delay="0s" style="background:url(img/banner3.jpg) no-repeat 0 50%;background-size:100% auto;"></div>
+            </li>
+            <li class="swiper-slide">
+                <div class="bg ani" swiper-animate-effect="scale_small" swiper-animate-duration="0.8s" swiper-animate-delay="0s" style="background:url(img/banner4.jpg) no-repeat 0 50%;background-size:100% auto;"></div>
+            </li>
+        </ul>
+    <!-- slide end -->
+    <style>
+		*{margin:0;padding:0;}
+		html,body,.swiper-container,.swiper-slide .bg{
+			width:100%;
+			height:100%;
+			overflow:hidden;
+		}
+		ul,li{
+			list-style-type:none;
+		}
+    </style>
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="js/swiper-3.3.1.jquery.min.js"></script>
+    <script type="text/javascript" src="js/swiper.animate1.0.2.min.js"></script>
+    <script>
+		var swiper = new Swiper(".swiper-container",{
+					effect:"fade",
+					onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+						swiperAnimateCache(swiper); //隐藏动画元素 
+						swiperAnimate(swiper); //初始化完成开始动画
+					  }, 
+					  onSlideChangeEnd: function(swiper){ 
+						swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+					  } 
+				});
+    </script>
+</body>
+</html>

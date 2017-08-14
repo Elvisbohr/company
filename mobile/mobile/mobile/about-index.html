@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<!-- 删除默认的苹果工具栏和菜单栏 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<!-- 禁止了把数字转化为拨号链接 -->
+<meta name="format-detection" content="telephone=no">
+<!-- 浏览网站时的小图标 -->
+<link rel="shortcut icon" href="http://p.www.xiaomi.com/favicon.ico" type="/image/x-icon">
+<title>关于我们</title>
+</head>
+
+<body class="about">
+	<!-- 标题logo框 -->
+	<section class="logo_box table">
+    	<div class="table_cell">
+        	<p class="delay02 duration08 slideDown">关于我们</p>
+            <img src="img/about/index/logo_font.png" class="delay04 duration08 slideDown"/>
+        </div>
+    </section>
+    <!-- 内容 -->
+    <section class="main"><div class="wrap">
+		<ul class="but_box">
+        	<li class="delay06 duration08 slideDown"><a href="about-culture.html">企业文化</a></li>
+            <li class="delay08 duration08 slideDown"><a href="about-join.html">加入我们</a></li>
+            <li class="delay1 duration08 slideDown"><a href="about-partner.html">合作伙伴</a></li>
+            <li class="delay12 duration08 slideDown"><a href="about-contact.html">联系我们</a></li>
+        </ul>
+        <p class="slogan delay14 duration08 slideDown">为了相同的目标，我们汇聚于此  坚持至今</p>
+   	</div></section>
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+        <script>
+		window.onload = function(){
+			$(".about").addClass("active");
+			//height 为100%
+			$(".heightHun").each(function(index, element) {
+               var oP = $(this).parent();
+			   $(this).height(oP.height());
+            });
+		}
+    </script>
+</body>
+</html>

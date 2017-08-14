@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<!-- 删除默认的苹果工具栏和菜单栏 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<!-- 禁止了把数字转化为拨号链接 -->
+<meta name="format-detection" content="telephone=no">
+<!-- 浏览网站时的小图标 -->
+<link rel="shortcut icon" href="" type="/image/x-icon">
+<title>渠道推广</title>
+</head>
+
+<body class="wechat">
+    <!-- 内容 -->
+    <section class="channel"><div class="wrap">
+		<div class="top">
+        	<h2 class="title delay02 duration08 slideDown">渠道推广</h2>
+            <p class="delay04 duration08 slideDown">根据客户的品牌需求，提供相应的MP广告推广</p>
+            <p class="delay06 duration08 slideDown">大号资源转发推广、朋友圈广告推广</p>
+        </div>
+        <div class="pic_box">
+        	<ul>
+            	<li class="delay08 duration08 slideLeft"><img src="img/wechat/channel/top1.png"/></li>
+                <li class="delay1 duration08 slideLeft"><img src="img/wechat/channel/top2.png"/></li>
+                <li class="delay12 duration08 slideLeft"><img src="img/wechat/channel/top3.png"/></li>
+                <li class="delay14 duration08 slideRight"><img src="img/wechat/channel/top4.png"/></li>
+                <li class="delay16 duration08 slideRight"><img src="img/wechat/channel/top5.png"/></li>
+            </ul>
+        </div>
+   	</div></section>
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script>
+		window.onload = function(){
+			$(".channel").addClass("active");
+			//height 为100%
+			$(".heightHun").each(function(index, element) {
+               var oP = $(this).parent();
+			   $(this).height(oP.height());
+            });
+		}
+    </script>
+</body>
+</html>

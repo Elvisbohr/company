@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<!-- 删除默认的苹果工具栏和菜单栏 -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<!-- 禁止了把数字转化为拨号链接 -->
+		<meta name="format-detection" content="telephone=no">
+		<title>大集方圆</title>
+		<link rel="stylesheet" type="text/css" href="css/Reset CSS.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.3.1.min.css"/>
+		<link rel="stylesheet" href="css/animate.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/style1.css"/>
+		<script>
+			if(/Android (\d+\.\d+)/.test(navigator.userAgent)){
+				var version = parseFloat(RegExp.$1);
+				if(version>2.3){
+					var phoneScale = parseInt(window.screen.width)/640;
+					document.write('<meta name="viewport" content="width=640, minimum-scale = '+ phoneScale +', maximum-scale = '+ phoneScale +', target-densitydpi=device-dpi">');
+				}else{
+					document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+				}
+			}else{
+				document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+			}
+		
+		</script>
+		
+	</head>
+	<body>
+		<!--着陆页-->
+		<div class="loading">
+			<div class="cube cube1 duration12 delay04">
+				<div class="out_front"></div>
+				<div class="out_back"></div>
+				<div class="out_left"></div>
+				<div class="out_right"></div>
+				<div class="out_top"></div>
+				<div class="out_bottom"></div>
+			</div>
+			<div class="cube cube2 duration12 delay06">
+				<div class="out_front"></div>
+				<div class="out_back"></div>
+				<div class="out_left"></div>
+				<div class="out_right"></div>
+				<div class="out_top"></div>
+				<div class="out_bottom"></div>
+			
+				<!--小正方体 -->
+				<span class="in_front"></span>
+				<span class="in_back"></span>
+				<span class="in_left"></span>
+				<span class="in_right"></span>
+				<span class="in_top"></span>
+				<span class="in_bottom"></span>
+			</div>
+			<div class="cube cube3 duration12 delay08">
+				<div class="out_front"></div>
+				<div class="out_back"></div>
+				<div class="out_left"></div>
+				<div class="out_right"></div>
+				<div class="out_top"></div>
+				<div class="out_bottom"></div>
+			</div>
+			<div class="cube cube4 duration12 delay1">
+				<div class="out_front"></div>
+				<div class="out_back"></div>
+				<div class="out_left"></div>
+				<div class="out_right"></div>
+				<div class="out_top"></div>
+				<div class="out_bottom"></div>
+			</div>
+			<div class="logo_text">
+				<img src="img/logo_text.png" />
+			</div>
+			<div class="logo">
+				<img src="img/logo.png" />
+			</div>
+			<div class="logo_eng">
+				<img src="img/logo_eng.png" />
+			</div>
+		</div>
+		
+		
+		<!--主页面-->
+		<div class="swiper-container wechat_index">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+				<ul id="scene" class="tit-bjc">
+					<li class="layer expand-width tit-bj" >
+						<img src="img/index-bj.png"/>
+					</li>
+						<img src="img/index-bjg.png" class="tit-bjg"/>
+					<li class="layer expand-width tit-logo ani" data-depth="0" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.8s" swiper-animate-delay="9.8s" data-depth="0.60">
+						<img src="img/index-logo.png"/>
+					</li>
+					<li class="layer expand-width tit-logot ani" data-depth="0" swiper-animate-effect="rotateInDownLeft" swiper-animate-duration="0.5s" swiper-animate-delay="10.1s">
+						<img src="img/index-logot.png"/>
+					</li>
+				</ul>
+			
+				<div class="main">
+					<div class="main-conter">
+						<div class="main-list fl ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="10.4s">
+							<img src="img/title-1.png"/>
+							<span><a href="offices.html">智慧办公</a></span>
+						</div>
+						<div class="main-list fl ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="10.7s">
+							<img src="img/title-2.png"/>
+							<span><a href="wechat-index.html">微信运营</a></span>
+						</div>
+						<div class="main-list fl ani" swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="11.0s">
+							<img src="img/title-3.png"/>
+							<span><a href="Internet.html">大集方圆＋</a></span>
+						</div>
+						<div class="main-list fl ani" swiper-animate-effect="fadeInRight" swiper-animate-duration="0.5s" swiper-animate-delay="11.3s">
+							<img src="img/title-4.png"/>
+							<span><a href="about-index.html">关于我们</a></span>
+						</div>
+						<div class="cel"></div>
+						<div class="i-foot ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="11.6s">-Welcome To DAJIFANGYUAN-</div>
+					</div>
+				</div>
+				</div>
+			</div>
+		</div>
+		<script src="js/parallax.min.js"></script>
+		<script>
+		
+		// Nothing new here...it's all in the CSS!
+		var scene = document.getElementById('scene');
+		var parallax = new Parallax(scene);
+		</script>
+		<script src="js/jquery1.9.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper-3.3.1.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper.animate1.0.2.min.js" type="text/javascript" charset="utf-8"></script>
+
+
+		<script>
+			  var mySwiper = new Swiper ('.swiper-container', {
+			  onInit: function(swiper){ //Swiper2.x的初始化是onFirstInit
+			    swiperAnimateCache(swiper); //隐藏动画元素 
+			    swiperAnimate(swiper); //初始化完成开始动画
+			  }, 
+			  onSlideChangeEnd: function(swiper){ 
+			    swiperAnimate(swiper); //每个slide切换结束时也运行当前slide动画
+			  } 
+			  })
+		  </script>
+		  <script>
+		  	var url = location.href,isOnload = url.substr(url.indexOf("#"));
+			if(isOnload != "#ccc"){
+				var img = new Image();
+				img.src = "img/logo.png";
+				img.onload = function(){
+					var oB = document.getElementsByClassName("loading")[0];
+					oB.className = "loading cube_act";
+					setTimeout(function(){
+						oB.className = "loading cube_act cube_act2";
+					},2500)
+					setTimeout(function(){
+						oB.className = "loading cube_act cube_act2 cube_act3";
+					},5500)
+					setTimeout(function(){
+						oB.className = "loading cube_act cube_act2 cube_act3 cube_act4";
+					},6700)
+					setTimeout(function(){
+						$(".loading").addClass("hide");
+						$(".wechat_index").addClass("active");
+						location.href = "#ccc";
+						$("head").append('<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">');
+					},9500)
+				}
+			}else{
+				$(".loading").addClass("hide");
+				$(".wechat_index").addClass("active");
+				$("head").append('<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">');
+			}
+		  	
+		  </script>
+	</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<!-- 删除默认的苹果工具栏和菜单栏 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<!-- 禁止了把数字转化为拨号链接 -->
+<meta name="format-detection" content="telephone=no">
+<!-- 浏览网站时的小图标 -->
+<link rel="shortcut icon" href="" type="/image/x-icon">
+<title>品牌定位系统</title>
+</head>
+
+<body class="wechat">
+    <!-- 内容 -->
+    <section class="brand"><div class="wrap">
+		<div class="top">
+        	<h2 class="title delay02 duration08 slideDown">品牌定位系统</h2>
+            <p class="slideDown delay04 duration08">专业的调研团队，优秀的运营经理为您</p>
+            <p class="slideDown delay06 duration08">量身定制微信品牌定位推广</p>
+        </div>
+        <div class="pic_box">
+        	<img src="img/wechat/brand/circle1.png" class="circle1 rotateScale delay16 duration08"/>
+            <div class="we_icon table heightHun"><div class="table_cell">
+            	<img src="img/wechat/brand/wechat_icon.png" class="rotateScale delay08 duration08"/>
+            </div></div>
+            <div class="we_back table heightHun"><div class="table_cell">
+            	<img src="img/wechat/brand/circle2.png" class="rotateScale delay12 duration08"/>
+            </div></div>
+            <div class="type_box rotate1 delay22 duration08">
+                <div class="plan rotate2 delay22 duration08">
+                    <img src="img/wechat/brand/plan.png"/>
+                </div>
+                <div class="schedule rotate2 delay22 duration08"><img src="img/wechat/brand/schedule.png"/></div>
+                <div class="diagnose rotate2 delay22 duration08"><img src="img/wechat/brand/diagnose.png"/></div>
+            </div>
+        </div>
+        
+        <div class="desc_box">
+        	<h4 class="delay24 duration08 slideDown">商家诊断分析</h4>
+            <p class="delay26 duration08 slideDown">基于技术评估及行业实操经验</p>
+            <p class="delay28 duration08 slideDown">针对客户需求提出可行性的诊断与优化建议</p>
+            <h4 class="delay3 duration08 slideDown">商户运营计划</h4>
+            <p class="delay32 duration08 slideDown">基于品牌及平台特色确定推广方向</p>
+            <p class="delay34 duration08 slideDown">制定针对性的营销推广方案</p>
+            <h4 class="delay36 duration08 slideDown">运营进度推进表</h4>
+            <p class="delay38 duration08 slideDown">针对平台运营的推广策略，制定落地</p>
+            <p class="delay4 duration08 slideDown">的执行进度表格，严格把控每个时间节点</p>
+        </div>
+   	</div></section>
+    <script type="text/javascript" src="js/zepto.min.js"></script>
+    <script>
+		window.onload = function(){
+			$(".brand").addClass("active");
+			//height 为100%
+			$(".heightHun").each(function(index, element) {
+               var oP = $(this).parent();
+			   $(this).height(oP.height());
+            });
+		}
+    </script>
+</body>
+</html>

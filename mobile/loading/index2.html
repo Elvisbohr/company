@@ -1,0 +1,393 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+<!-- 删除默认的苹果工具栏和菜单栏 -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<!-- 在web app应用下状态条（屏幕顶部条）的颜色 -->
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<!-- 禁止了把数字转化为拨号链接 -->
+<meta name="format-detection" content="telephone=no">
+<!-- 浏览网站时的小图标 -->
+<link rel="shortcut icon" href="http://p.www.xiaomi.com/favicon.ico" type="/image/x-icon">
+<script type="text/javascript" src="js/scale.js"></script>
+<title>无标题文档</title>
+</head>
+
+<body>
+  	<div class="cube cube1 duration12 delay04">
+        <div class="out_front"></div>
+        <div class="out_back"></div>
+        <div class="out_left"></div>
+        <div class="out_right"></div>
+        <div class="out_top"></div>
+        <div class="out_bottom"></div>
+    </div>
+    <div class="cube cube2 duration12 delay06">
+        <div class="out_front"></div>
+        <div class="out_back"></div>
+        <div class="out_left"></div>
+        <div class="out_right"></div>
+        <div class="out_top"></div>
+        <div class="out_bottom"></div>
+        
+        <!--小正方体 --> 
+        <span class="in_front"></span>
+        <span class="in_back"></span>
+        <span class="in_left"></span>
+        <span class="in_right"></span>
+        <span class="in_top"></span>
+        <span class="in_bottom"></span>
+    </div>
+    <div class="cube cube3 duration12 delay08">
+        <div class="out_front"></div>
+        <div class="out_back"></div>
+        <div class="out_left"></div>
+        <div class="out_right"></div>
+        <div class="out_top"></div>
+        <div class="out_bottom"></div>
+    </div>
+    <div class="cube cube4 duration12 delay1">
+        <div class="out_front"></div>
+        <div class="out_back"></div>
+        <div class="out_left"></div>
+        <div class="out_right"></div>
+        <div class="out_top"></div>
+        <div class="out_bottom"></div>
+    </div>
+    <div class="logo_text">
+    	<img src="img/logo_text.png"/>
+    </div>
+    <div class="logo">
+    	<img src="img/logo.png"/>
+    </div>
+    <div class="logo_eng">
+    	<img src="img/logo_eng.png"/>
+    </div>
+    <style>
+		*{margin:0;padding:0;}
+		.cube{
+			width: 76px;
+			height: 76px;
+			transform-style: preserve-3d;
+			position: absolute;
+			top:-110px;
+			/*匀速*/
+			animation-timing-function: linear;
+			
+		}
+		.cube div{
+			position: absolute;
+			width: 76px;
+			height: 76px;
+			opacity: 1;
+			transition: all .4s;
+		}
+		.cube .out_front{
+			transform: rotateY(0deg) translateZ(38px);
+		}
+		.cube .out_back{
+			transform: translateZ(-38px) rotateY(180deg);
+		}
+		.cube .out_left{
+			transform: rotateY(90deg) translateZ(38px);
+		}
+		.cube .out_right{
+			transform: rotateY(-90deg) translateZ(38px);
+		}
+		.cube .out_top{
+			transform: rotateX(90deg) translateZ(38px);
+		}
+		.cube .out_bottom{
+			transform: rotateX(-90deg) translateZ(38px);
+		}
+		
+		.cube1{
+			margin-left:31%;
+			z-index:3;
+			transform: rotateX(-75deg) rotateY(10deg) rotateZ(28deg);
+			transition-property:all;
+		}
+		.cube1 .out_front{
+			background:#e42914;
+		}
+		.cube1 .out_right{
+			background:#e85c41;
+		}
+		.cube1 .out_back,.cube1 .out_left,.cube1 .out_bottom{
+			background:#e42914;
+		}
+		.cube1 .out_top{
+			background:#ec8049;
+		}
+		
+		.cube2{
+			margin-left:52%;
+			z-index:4;
+			transform: rotateX(-30deg) rotateY(-30deg) rotateZ(2deg);
+			/*  */
+		}
+		.cube2 .out_front,.cube2 .out_right{
+			background:#44a9d9;
+		}
+		.cube2 .out_back,.cube2 .out_left,.cube2 .out_bottom{
+			background:#3393c2;
+		}
+		.cube2 .out_top{
+			background:#6ec8dc;
+		}
+		
+		.cube3{
+			z-index:1;
+			margin-left:42%;
+			transform: rotateX(-30deg) rotateY(-23deg) rotateZ(-13deg);
+			/*  */
+		}
+		.cube3 .out_front{
+			background:#5cbb89
+		}
+		.cube3 .out_right{
+			background:#44a9d9;
+		}
+		.cube3 .out_back,.cube3 .out_left,.cube3 .out_bottom{
+			background:#1ca95c;
+		}
+		.cube3 .out_top{
+			background:#38b570;
+		}
+		
+		.cube4,.cube4 div{
+			width:70px;
+			height:70px;
+		}
+		.cube4{
+			z-index:2;
+			margin-left:43.6%;
+			transform: rotateX(-37deg) rotateY(-3deg) rotateZ(-25deg);
+			/*  */
+		}
+		.cube4 .out_front{
+			background:#f5cf52;
+			transform: rotateY(0deg) translateZ(35px);
+		}
+		.cube4 .out_back{
+			background:#f5ba2e;
+			transform: translateZ(-35px) rotateY(180deg);
+		}
+		.cube4 .out_left{
+			background:#f5ba2e;
+			transform: rotateY(90deg) translateZ(35px);
+		}
+		.cube4 .out_right{
+			background:#f5ba2e;
+			transform: rotateY(-90deg) translateZ(35px);
+		}
+		.cube4 .out_top{
+			background:#f7db83;
+			transform: rotateX(90deg) translateZ(35px);
+		}
+		.cube4 .out_bottom{
+			background:#f5ba2e;
+			transform: rotateX(-90deg) translateZ(35px);
+		}
+		
+		.duration12{
+			-webkit-transition-duration:1.2s;
+			transition-duration:1.2s;
+		}
+		.delay04{
+			-transition-delay:0.4s;
+			transition-delay:0.4s;
+		}
+		.delay06{
+			-transition-delay:0.6s;
+			transition-delay:0.6s;
+		}
+		.delay08{
+			-transition-delay:0.8s;
+			transition-delay:0.8s;
+		}
+		.delay1{
+			-transition-delay:1s;
+			transition-delay:1s;
+		}
+		.cube_act .cube1,.cube_act .cube2{
+			top:504px;
+		}
+		.cube_act .cube1{
+			margin-left:228px;
+			transform: rotateX(-35deg) rotateY(45deg) rotateZ(0deg);
+		}
+		.cube_act .cube2{
+			margin-left:336px;
+			transform: rotateX(-35deg) rotateY(-45deg) rotateZ(0deg);
+		}
+		.cube_act .cube3{
+			top:470px;
+			margin-left:282px;
+			transform: rotateX(-35deg) rotateY(-45deg) rotateZ(0deg);
+		}
+		.cube_act .cube4{
+			top:415px;
+			margin-left:285px;
+			transform: rotateX(-35deg) rotateY(-45deg) rotateZ(0deg);
+		}
+		
+		.cube_act2 .cube1,.cube_act2 .cube2{
+			top:470px;
+			margin-left:282px;
+			transition-duration:0.6s;
+		}
+		.cube_act2 .cube4{
+			top:471px;
+			transition-delay:0.4s;
+			transition-duration:0.6s;
+		}
+		.cube_act2 .cube1{
+			transition-delay:1s;
+		}
+		.cube_act2 .cube2{
+			transition-delay:1.6s;
+		}
+		.cube_act2 .cube2 .out_top {
+			background:#f7db83;
+			transition:all .6s 1.6s;
+		}
+		.cube_act2 .cube2 .out_front {
+			background:#e95c40;
+			transition:all .6s 1.6s;
+		}
+		
+		/*定义小正方体样式*/
+		.cube span{
+			display: bloack;
+			width: 76px;
+			height: 76px;
+			position: absolute;
+			opacity:0;
+			transition:all 0.8s 2.2s;
+		}
+		.cube .in_pic{
+			width: 100px;
+			height: 100px;
+		}
+		.cube2 .in_front{
+			background:#e52814;
+			transform: rotateY(0deg) translateZ(500px);
+		}
+		.cube2 .in_back{
+			background:#38b570;
+			transform: translateZ(-500px) rotateY(180deg);
+		}
+		.cube2 .in_left{
+			background:#6ec9dd;
+			transform: rotateY(90deg) translateZ(500px);
+		}
+		.cube2 .in_right{
+			background:#6ec9dd;
+			transform: rotateY(-90deg) translateZ(500px);
+		}
+		.cube2 .in_top{
+			background:#f5cf52;
+			transform: rotateX(90deg) translateZ(500px);
+		}
+		.cube2 .in_bottom{
+			background:#38b570;
+			transform: rotateX(-90deg) translateZ(500px);
+		}
+		.cube_act2 .cube2 span{
+			opacity:1;
+		}
+		.cube_act2 .cube2 .in_front{
+			transform: rotateY(0deg) translateZ(38px);
+		}
+		.cube_act2 .cube2 .in_back{
+			transform: translateZ(-38px) rotateY(180deg);
+		}
+		.cube_act2 .cube2 .in_left{
+			transform: rotateY(90deg) translateZ(38px);
+		}
+		.cube_act2 .cube2 .in_right{
+			transform: rotateY(-90deg) translateZ(38px);
+		}
+		.cube_act2 .cube2 .in_top{
+			transform: rotateX(90deg) translateZ(38px);
+		}
+		.cube_act2 .cube2 .in_bottom{
+			transform: rotateX(-90deg) translateZ(38px);
+		}
+		
+		.cube_act3 .cube1,.cube_act3 .cube3,.cube_act3 .cube4{
+			opacity:0;
+			display:none;
+		}
+		.cube_act3 .cube2{
+			transform: rotateX(35deg) rotateY(-45deg) rotateZ(0deg);
+			opacity:1;
+			transition:transform 0.8s 0.4s;
+		}
+		.logo_text{
+			position:absolute;
+			top:488px;
+			left:275px;
+			width:209px;
+			overflow:hidden;
+			opacity:1;
+		}
+		.logo_text img{
+			margin-left:-100%;
+		}
+		.logo,.logo_eng{
+			top:458px;
+			opacity:0;
+			position:absolute;
+			width:100%;
+			text-align:center;
+		}
+		.logo_eng{
+			top:550px;
+			transform:translateY(200%);
+		}
+		.cube_act4 .cube2{
+			margin-left:160px;
+			top:440px;
+			opacity:0;
+			transition:margin-left 1s 0.4s,top 1s 1.4s,opacity .7s 1.4s;
+		}
+		.cube_act4 .logo_text{
+			top:458px;
+			opacity:0;
+			transition:top 1s 1.4s,opacity .7s 1.4s;
+		}
+		.cube_act4 .logo_text img{
+			margin-left:0;
+			transition:all 1s 0.4s;
+		}
+		.cube_act4 .logo{
+			opacity:1;
+			transition:all .7s 1.4s;
+		}
+		.cube_act4 .logo_eng{
+			opacity:1;
+			transform:translateY(0);
+			transition:all .7s 2.1s;
+		}
+    </style>
+    <script>
+		window.onload = function(){
+			var oB = document.getElementsByTagName("body")[0];
+			oB.className = "cube_act";
+			setTimeout(function(){
+				oB.className = "cube_act cube_act2";
+			},2500)
+			setTimeout(function(){
+				oB.className = "cube_act cube_act2 cube_act3";
+			},5500)
+			setTimeout(function(){
+				oB.className = "cube_act cube_act2 cube_act3 cube_act4";
+			},6700)
+		}
+    </script>
+</body>
+</html>
